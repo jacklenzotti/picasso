@@ -19,7 +19,7 @@ export GEMINI_API_KEY=your_key_here
 ### slice — Split sprite sheets into tiles
 
 ```bash
-# Auto-detect tile boundaries
+# Auto-detect tile boundaries (recommended for AI-generated sheets)
 python3 cli.py slice input.png -o ./sprites --auto --bg-color "#FFFFFF"
 
 # Grid-based slicing
@@ -28,6 +28,8 @@ python3 cli.py slice input.png -o ./sprites --rows 3 --cols 3
 # Cell size slicing
 python3 cli.py slice input.png -o ./sprites --cell-size 32x32
 ```
+
+> **Tip:** Prefer `--auto` over `--rows`/`--cols` for AI-generated sprite sheets. Grid slicing assumes uniform cell sizes, but AI output often has slight alignment drift that causes sprites to bleed across cell boundaries. Auto-detect finds actual sprite bounding boxes instead.
 
 ### process — Post-process sprites
 
