@@ -1,0 +1,29 @@
+# Environment & secrets
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code
+.claude/
+
+# Generated output (re-generate from source images)
+game_assets/
+
+# Temp files
+/tmp/
+*.tmp

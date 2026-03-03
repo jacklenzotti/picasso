@@ -1,0 +1,29 @@
+{
+  "input": "./raw/",
+  "steps": [
+    {
+      "op": "slice",
+      "args": {
+        "auto": true,
+        "bg_color": "#FFFFFF",
+        "tolerance": 30
+      }
+    },
+    {
+      "op": "process",
+      "args": {
+        "remove_bg": "#FFFFFF",
+        "clean_edges": true,
+        "tolerance": 30
+      }
+    },
+    {
+      "op": "pack",
+      "args": {
+        "padding": 1,
+        "power_of_2": true
+      }
+    }
+  ],
+  "output": "./game_assets/"
+}

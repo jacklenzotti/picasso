@@ -1,0 +1,21 @@
+{
+  "steps": [
+    {
+      "op": "slice",
+      "args": {
+        "auto": true,
+        "bg_color": "#FFFFFF",
+        "tolerance": 30
+      }
+    },
+    {
+      "op": "process",
+      "args": {
+        "remove_bg": "#FFFFFF",
+        "clean_edges": true,
+        "tolerance": 30
+      }
+    }
+  ],
+  "output": "./game_assets/game_icons/"
+}

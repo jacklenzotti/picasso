@@ -1,0 +1,28 @@
+{
+  "steps": [
+    {
+      "op": "generate",
+      "args": {
+        "prompt": "6 UI button sprites in a 2x3 grid on a pure white background. Pixel art style, 96x32 per button. Buttons: Play, Settings, Quit, Resume, Restart, Menu. Each button should have a rounded rectangle shape with subtle 3D bevel effect and readable text.",
+        "model": "gemini-2.5-flash-image"
+      }
+    },
+    {
+      "op": "slice",
+      "args": {
+        "auto": true,
+        "bg_color": "#FFFFFF",
+        "tolerance": 30
+      }
+    },
+    {
+      "op": "process",
+      "args": {
+        "remove_bg": "#FFFFFF",
+        "clean_edges": true,
+        "tolerance": 30
+      }
+    }
+  ],
+  "output": "./game_assets/buttons/"
+}

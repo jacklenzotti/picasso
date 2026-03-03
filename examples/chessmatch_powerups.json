@@ -1,0 +1,28 @@
+{
+  "steps": [
+    {
+      "op": "generate",
+      "args": {
+        "prompt": "8 chess powerup icons arranged in a 2x4 grid on a pure white background. Pixel art style, 32x32 per icon. Icons: shield, sword, lightning bolt, crown, hourglass, heart, star, flame. Each icon should be distinct and colorful with clean outlines.",
+        "model": "gemini-2.5-flash-image"
+      }
+    },
+    {
+      "op": "slice",
+      "args": {
+        "auto": true,
+        "bg_color": "#FFFFFF",
+        "tolerance": 30
+      }
+    },
+    {
+      "op": "process",
+      "args": {
+        "remove_bg": "#FFFFFF",
+        "clean_edges": true,
+        "tolerance": 30
+      }
+    }
+  ],
+  "output": "./game_assets/powerups/"
+}

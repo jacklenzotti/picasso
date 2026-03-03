@@ -1,0 +1,27 @@
+{
+  "steps": [
+    {
+      "op": "generate",
+      "args": {
+        "prompt": "4 chess board tile textures in a 2x2 grid on a pure white background. Pixel art style, 64x64 per tile. Themes: classic wood, marble, dark stone, grass/garden. Each tile should seamlessly tile and have a subtle checker pattern baked in.",
+        "model": "gemini-2.5-flash-image"
+      }
+    },
+    {
+      "op": "slice",
+      "args": {
+        "auto": true,
+        "bg_color": "#FFFFFF",
+        "tolerance": 30
+      }
+    },
+    {
+      "op": "process",
+      "args": {
+        "remove_bg": "#FFFFFF",
+        "tolerance": 30
+      }
+    }
+  ],
+  "output": "./game_assets/boards/"
+}
